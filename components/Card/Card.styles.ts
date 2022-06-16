@@ -12,11 +12,11 @@ const CardStyled = styled('div')<CardStyledProps>`
   flex-direction: column;
 
   .__spacer {
-    padding: 25px;
+    /* padding: 20px; */
   }
 
   .__content {
-    background-color: ${Colors.DefaultBackground};
+    background-color: ${Colors.DarkBlue};
     border-radius: 15px;
     color: white;
     margin-top: auto;
@@ -25,7 +25,12 @@ const CardStyled = styled('div')<CardStyledProps>`
     .__header {
       display: flex;
 
+      .__label {
+        font: 500 1.125em 'Rubik';
+      }
+
       .__more {
+        cursor: pointer;
         margin-left: auto;
       }
     }

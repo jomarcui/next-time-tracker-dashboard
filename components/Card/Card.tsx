@@ -19,7 +19,10 @@ const Card: FC<ICard> = ({ content, label }) => {
       <div className="__content">
         <div className="__header">
           <div className="__label">{label}</div>
-          <div className="__more">...</div>
+          <div className="__more">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img alt="" src="/images/icon-ellipsis.svg" />
+          </div>
         </div>
         <div className="__body">{thisWeek}hrs</div>
         <div className="footer">Last Week - {lastWeek}hrs</div>

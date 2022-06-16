@@ -5,20 +5,25 @@ const CardStyled = styled('div')`
   background-color: ${Colors.DefaultBackground};
   border-radius: 15px;
   grid-area: Profile;
+  width: 255px;
 
   .profile {
     background-color: ${Colors.Profile};
     border-radius: 15px;
     padding: 25px;
 
-    .__label {
-      color: white;
-      font-size: 0.75em;
-    }
+    .info {
+      margin: 25px 0;
 
-    .__value {
-      color: white;
-      font-size: 2.188em;
+      .__label {
+        color: ${Colors.PaleBlue};
+        font: 300 1em 'Rubik';
+      }
+
+      .__value {
+        color: white;
+        font: 300 2.188em 'Rubik';
+      }
     }
   }
 
@@ -31,11 +36,23 @@ const CardStyled = styled('div')`
       padding: 0;
 
       .__item {
-        color: white;
+        color: ${Colors.PaleBlue};
+        cursor: pointer;
+        font: 300 1.125em 'Rubik';
         margin: 25px 0;
+
+        &.-selected {
+          color: white;
+          font-weight: 400;
+        }
 
         &:first-child {
           margin-top: 0;
+        }
+
+        &:hover {
+          color: white;
+          font-weight: 400;
         }
 
         &:last-child {
@@ -46,4 +63,11 @@ const CardStyled = styled('div')`
   }
 `;
 
-export default CardStyled;
+const ImageWrap = styled.span`
+  & > span {
+    border: 2px solid white !important;
+    border-radius: 50px;
+  }
+`;
+
+export { CardStyled as default, ImageWrap };
