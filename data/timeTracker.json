@@ -1,0 +1,64 @@
+{
+  "timeTracker": {
+    "user": {
+      "firstName": "Jeremy",
+      "lastName": "Robson"
+    },
+    "cards": [
+      {
+        "label": "Work",
+        "content": {
+          "hoursSpent": {
+            "lastWeek": 36,
+            "thisWeek": 32
+          }
+        }
+      },
+      {
+        "label": "Play",
+        "content": {
+          "hoursSpent": {
+            "lastWeek": 8,
+            "thisWeek": 10
+          }
+        }
+      },
+      {
+        "label": "Study",
+        "content": {
+          "hoursSpent": {
+            "lastWeek": 7,
+            "thisWeek": 4
+          }
+        }
+      },
+      {
+        "label": "Exercise",
+        "content": {
+          "hoursSpent": {
+            "lastWeek": 5,
+            "thisWeek": 4
+          }
+        }
+      },
+      {
+        "label": "Social",
+        "content": {
+          "hoursSpent": {
+            "lastWeek": 10,
+            "thisWeek": 5
+          }
+        }
+      },
+      {
+        "label": "Self Care",
+        "content": {
+          "hoursSpent": {
+            "lastWeek": 2,
+            "thisWeek": 2
+          }
+        }
+      }
+    ]
+  }
+}
