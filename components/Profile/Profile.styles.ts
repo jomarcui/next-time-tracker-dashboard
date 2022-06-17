@@ -107,6 +107,16 @@ const CardStyled = styled('div')`
         }
       }
     }
+
+    .report-types {
+      .__list {
+        display: block;
+
+        .__item {
+          margin: 25px 0;
+        }
+      }
+    }
   }
 `;
 
