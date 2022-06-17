@@ -18,7 +18,6 @@ const CardStyled = styled('div')<CardStyledProps>`
   .__content {
     background-color: ${Colors.DarkBlue};
     border-radius: 15px;
-    color: white;
     margin-top: auto;
     padding: 25px;
 
@@ -26,6 +25,7 @@ const CardStyled = styled('div')<CardStyledProps>`
       display: flex;
 
       .__label {
+        color: white;
         font: 500 1.125em 'Rubik';
       }
 
@@ -35,8 +35,39 @@ const CardStyled = styled('div')<CardStyledProps>`
       }
     }
 
-    .__body {
-      font-size: 3.75em;
+    .responsive-container {
+      .__body {
+        color: white;
+        font: 300 3.75em 'Rubik';
+      }
+
+      .footer {
+        color: ${Colors.PaleBlue};
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .responsive-container {
+        align-items: center;
+        display: flex;
+        margin-top: 10px;
+
+        .__body {
+          color: white;
+          font-size: 1.818em;
+        }
+
+        .footer {
+          color: ${Colors.PaleBlue};
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .__spacer {
+      padding: 10px;
     }
   }
 `;

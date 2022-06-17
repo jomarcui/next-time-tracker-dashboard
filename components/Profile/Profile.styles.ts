@@ -62,15 +62,50 @@ const CardStyled = styled('div')`
     }
   }
 
-  @media screen and (min-width: 640px) {
+  @media screen and (max-width: 640px) {
     width: 100%;
+
+    .profile {
+      align-items: center;
+      display: flex;
+      padding: 20px;
+
+      .__image-container {
+        padding-right: 10px;
+      }
+
+      .info {
+        margin: 0;
+        padding-left: 10px;
+
+        .__value {
+          font-size: 1.5em;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .report-types {
+      padding: 25px 30px;
+
+      .__list {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .__item {
+          margin: 0;
+        }
+      }
+    }
   }
 `;
 
 const ImageWrap = styled.span`
-  & > span {
-    border: 2px solid white !important;
+  img {
+    border: 3px solid white;
     border-radius: 50px;
+    width: 70px;
   }
 `;
 

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { FC } from 'react';
 import CardStyled, { ImageWrap } from './Profile.styles';
 
@@ -12,13 +11,12 @@ const reportTypes = ['Daily', 'Weekly', 'Monthly'];
 const Profile: FC<IProfile> = ({ firstName, lastName }) => (
   <CardStyled>
     <div className="profile">
-      <ImageWrap>
-        <Image
+      <ImageWrap className="__image-container">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           alt={`${firstName} ${lastName}`}
-          height={85}
           src="/images/image-jeremy.png"
-          width={85}
-        />
+        ></img>
       </ImageWrap>
       <div className="info">
         <div className="__label">Report for</div>

@@ -15,7 +15,7 @@ const Card: FC<ICard> = ({ content, label }) => {
 
   return (
     <CardStyled backgroundColor={backgroundColor}>
-      <div className="__spacer"></div>
+      <div className="__spacer">&nbsp;</div>
       <div className="__content">
         <div className="__header">
           <div className="__label">{label}</div>
@@ -24,8 +24,10 @@ const Card: FC<ICard> = ({ content, label }) => {
             <img alt="" src="/images/icon-ellipsis.svg" />
           </div>
         </div>
-        <div className="__body">{thisWeek}hrs</div>
-        <div className="footer">Last Week - {lastWeek}hrs</div>
+        <div className="responsive-container">
+          <div className="__body">{thisWeek}hrs</div>
+          <div className="footer">Last Week - {lastWeek}hrs</div>
+        </div>
       </div>
     </CardStyled>
   );
