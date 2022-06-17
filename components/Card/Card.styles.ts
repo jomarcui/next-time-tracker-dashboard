@@ -1,25 +1,37 @@
 import styled from '@emotion/styled';
-import { Colors } from '../../enums/colors';
+import { Colors, Icons } from '../../enums/colors';
 
 type CardStyledProps = {
   backgroundColor: Colors;
+  icon: Icons;
+  backgroundSize: string;
 };
 
 const CardStyled = styled('div')<CardStyledProps>`
+  background-image: url(${({ icon }) => icon});
   background-color: ${({ backgroundColor }) => backgroundColor};
+  background-position: top -10px right 15px;
+  background-repeat: no-repeat;
+  background-size: ${({ backgroundSize }) => backgroundSize};
   border-radius: 15px;
   display: flex;
   flex-direction: column;
 
   .__spacer {
-    /* padding: 20px; */
+    padding: 10px;
   }
 
   .__content {
     background-color: ${Colors.DarkBlue};
     border-radius: 15px;
+    cursor: pointer;
     margin-top: auto;
     padding: 25px;
+    transition: background-color 0.1s ease-in;
+
+    &:hover {
+      background-color: #34397b;
+    }
 
     .__header {
       display: flex;
@@ -30,7 +42,6 @@ const CardStyled = styled('div')<CardStyledProps>`
       }
 
       .__more {
-        cursor: pointer;
         margin-left: auto;
       }
     }
@@ -43,6 +54,7 @@ const CardStyled = styled('div')<CardStyledProps>`
 
       .footer {
         color: ${Colors.PaleBlue};
+        font: 300 1em 'Rubik';
       }
     }
 
@@ -62,12 +74,6 @@ const CardStyled = styled('div')<CardStyledProps>`
           margin-left: auto;
         }
       }
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    .__spacer {
-      padding: 10px;
     }
   }
 `;

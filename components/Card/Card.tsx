@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Colors } from '../../enums/colors';
+import { Colors, Icons } from '../../enums/colors';
 import CardStyled from './Card.styles';
 
 export interface ICard {
@@ -8,13 +8,23 @@ export interface ICard {
 }
 
 const Card: FC<ICard> = ({ content, label }) => {
-  const backgroundColor = Colors[label.replace(/ +/g, '')];
+  const category = label.replace(/ +/g, '');
+
+  const backgroundColor = Colors[category];
+  const backgroundSize =
+    category.toLowerCase() === 'exercise' ? 'auto' : '70px';
+  const icon = Icons[category];
+
   const {
     hoursSpent: { lastWeek, thisWeek },
   } = content;
 
   return (
-    <CardStyled backgroundColor={backgroundColor}>
+    <CardStyled
+      backgroundColor={backgroundColor}
+      backgroundSize={backgroundSize}
+      icon={icon}
+    >
       <div className="__spacer">&nbsp;</div>
       <div className="__content">
         <div className="__header">

@@ -12,3 +12,12 @@ export enum Colors {
   DesaturatedBlue = 'hsl(235, 45%, 61%)',
   PaleBlue = 'hsl(236, 100%, 87%)',
 }
+
+export enum Icons {
+  Exercise = '/images/icon-exercise.svg',
+  Play = '/images/icon-play.svg',
+  SelfCare = '/images/icon-self-care.svg',
+  Social = '/images/icon-social.svg',
+  Study = '/images/icon-study.svg',
+  Work = '/images/icon-work.svg',
+}

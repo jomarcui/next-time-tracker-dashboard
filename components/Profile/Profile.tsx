@@ -20,7 +20,10 @@ const Profile: FC<IProfile> = ({ firstName, lastName }) => (
       </ImageWrap>
       <div className="info">
         <div className="__label">Report for</div>
-        <div className="__value">{`${firstName} ${lastName}`}</div>
+        <div className="__value">
+          <span>{firstName} </span>
+          <span>{lastName}</span>
+        </div>
       </div>
     </div>
     <div className="report-types">
